@@ -62,6 +62,7 @@ Person.prototype.toString = function () {
 }
 
 Person.prototype.play = function () {
+  // @ts-ignore
   return `${this.name} is playing with their ${this.favoriteToy}`
 }
 
@@ -117,10 +118,10 @@ Baby.prototype = Object.create(Person.prototype);
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. Window Binding - if no other rules apply, "this" defaults to the window. In strict mode, it returns undefined.
+  2. Implicit binding - when calling a function with dot(.) notation, this refers to the object to the left of the dot.
+  3. Explicit - .call(), .bind(), .apply(): this refers to the object in the parenthesis.
+  4. new binding - the new keyword creates a new object from a constructor, this refers to the new object.
 */
 
 
